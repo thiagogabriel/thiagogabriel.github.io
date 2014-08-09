@@ -15,7 +15,7 @@ This the most common problem when someone tries to install PIL library on *nix O
 
 <!--more-->
 
-```bash
+{% highlight bash %}
 ---------------------------------------------------------------
     *** TKINTER support not available
     --- JPEG support not available
@@ -23,7 +23,7 @@ This the most common problem when someone tries to install PIL library on *nix O
     --- FREETYPE2 support not available
     *** LITTLECMS support not available
 ---------------------------------------------------------------
-```
+{% endhighlight %}
 
 Their solutions solve 90% of the cases, but I need to use PIL in my virtualenv, so I have to make a link from `/usr/lib/`  to `/home/my_user/my_env/lib` . In my case, my libjpeg is named libjpeg.so.62 and I don’t have permission (it is not recommended to rename, because it can be used by other programs). So, I created a link in my virtualenv with other name `ln -s /usr/lib/libjpeg.so.62 /home/my_user/my_env/lib/libjpeg.so`. Just worked on this way.
 

@@ -12,14 +12,14 @@ categories:
 
 This week it was decided to replace all date fields in the project with [pickadate.js][]. It was a smooth change using [pickadate-rails][] gem. Using simple_form, you have to change the input to something like this 
 
-```erb app/views/users/_form.html.erb
-{% highlight ruby %}
+app/views/users/_form.html.erb
+{% highlight erb %}
 <%= f.input :birthday, as: :string, input_html: { class: "datepicker" } %>
 {% endhighlight %}
 and the application.js can be something like this
 
-javascript app/assets/javascripts/application.js
-{% highlight ruby %}
+app/assets/javascripts/application.js
+{% highlight javascript lineos %}
 ('.datepicker').pickadate({
     format: 'yyyy-mm-dd',
     selectYears: true,
@@ -33,8 +33,8 @@ Then it started a problem on capybara tests, because birthday is a mandatory fie
 
 Searching into capybara API, I didn't find something like `fill_in 'Birthday', :with => '1990-08-24', force: true`, so the solution I got is to hack [executing some javascript][capybara-scripting] in the page context.
 
-ruby spec/acceptance/user_form_spec.rb
-{% highlight ruby %}
+spec/acceptance/user_form_spec.rb
+{% highlight ruby lineos %}
 describe "Create user", :js => true do
   it {
     visit '/users/new'
@@ -52,9 +52,9 @@ Line 5 removes readonly attribute from input and line 7 is also very important i
 ![image](/images/posts/2013-08-03/pickadate-popup.jpg)
 
 An easier solution is to set the field value directly through javascript:
-```javascript
+{% highlight javascript %}
 page.execute_script("$('#datepicker').val('1970-01-01')")
-```
+{% endhighlight %}
 On this way you don't need to use `trigger('click')`.
 
 

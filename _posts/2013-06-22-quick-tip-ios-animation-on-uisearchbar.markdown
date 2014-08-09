@@ -22,7 +22,7 @@ This post is about the following effects:
 
 In our case, we already have UISearchBar in our .xib and UISearchBarDelegate as protocol on @interface (.h) file.
 
-objc MyOwnViewController.h
+MyOwnViewController.h
 {% highlight objective-c %}
 @interface MyOwnViewController : UIViewController <UISearchBarDelegate> {
 {% endhighlight %}
@@ -38,7 +38,7 @@ UISearchBarDelegate has many Delegate Methods. Here we’ll be using
 
 The code is the following:
 
-objc MyOwnViewController.m
+MyOwnViewController.m
 {% highlight objective-c %}
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
     [searchBar setShowsCancelButton:YES animated:YES];
@@ -46,7 +46,7 @@ objc MyOwnViewController.m
 }
 {% endhighlight %}
 
-objc MyOwnViewController.m
+MyOwnViewController.m
 {% highlight objective-c %}
 - (void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
     [searchBar setShowsCancelButton:NO animated:YES];
