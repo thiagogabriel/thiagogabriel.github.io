@@ -19,7 +19,7 @@ app/views/users/_form.html.erb
 and the application.js can be something like this
 
 app/assets/javascripts/application.js
-{% highlight javascript lineos %}
+{% highlight javascript linenos %}
 ('.datepicker').pickadate({
     format: 'yyyy-mm-dd',
     selectYears: true,
@@ -34,7 +34,7 @@ Then it started a problem on capybara tests, because birthday is a mandatory fie
 Searching into capybara API, I didn't find something like `fill_in 'Birthday', :with => '1990-08-24', force: true`, so the solution I got is to hack [executing some javascript][capybara-scripting] in the page context.
 
 spec/acceptance/user_form_spec.rb
-{% highlight ruby lineos %}
+{% highlight ruby linenos %}
 describe "Create user", :js => true do
   it {
     visit '/users/new'
