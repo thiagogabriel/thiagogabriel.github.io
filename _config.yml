@@ -9,3 +9,6 @@ github_username:  thiagogabriel
 # Build settings
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
+
+gems:
+  - jemoji
