@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.4.2'
 
-gem 'github-pages', '78'
+gem 'github-pages', '165'
 
 group :development do
   gem 'foreman'
