@@ -1,0 +1,22 @@
+" ============================================================================
+" Netrw Directory Listing                                        (netrw v156)
+"   /Users/thiagoborges/projects/thiagogabriel.github.io/images/products
+"   Sorted by      name
+"   Sort sequence: [\/]$,\<core\%(\.\d\+\)\=\>,\.h$,\.c$,\.cpp$,\~\=\*$,*,\.o$,\.obj$,\.info$,\.swp$,\.bak$,\~$
+"   Quick Help: <F1>:help  -:go up dir  D:delete  R:rename  s:sort-by  x:special
+" ==============================================================================
+../
+./
+.DS_Store
+abridor-de-vinho.jpg
+ar-condicionado-portatil-tcl.jpg
+cadeira-presidente-airys.jpg
+cafeteira-french-press.jpg
+cama-de-casal.jpg
+escrivaninha-de-madeira.jpg
+mesa-4-cadeiras.jpg
+mochila-notebook.jpg
+monitor-4k-28.jpg
+ssd-samsung-840-120gb.jpg
+suporte-articulado.jpg
+tabua-de-passar.jpg
